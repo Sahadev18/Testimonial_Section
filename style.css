@@ -1,0 +1,101 @@
+*{
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blakish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --light--gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+    --medium:500;
+    --dark:600;
+    font-family: "Barlow Semi Condensed";
+}
+body{
+    background: var(--light-grayish-blue);
+}
+main{
+    width: 60rem;
+    margin: 8rem auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:1.5rem;
+}
+.t{
+    padding: 1.5rem;
+    border-radius: 5px;
+}
+.t1{
+    background: var(--moderate-violet);
+    background-image: url("./images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top right 4rem;
+    background-size: 6rem;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.t2{
+    background: var(--very-dark-grayish-blue);
+}
+.t3{
+    background: var(--white);
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.t4{
+    background: var(--very-dark-blakish-blue);
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+.t5{
+    background: var(--white);
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+.doc{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+img{
+    border-radius: 50%;
+    width:2rem;
+    border: 1px solid white;
+    margin-right: 1rem;
+}
+h5{
+    margin: 0;
+    color: var(--light--gray);
+}
+h6{
+    margin:0;
+    color: var(--light--gray);
+    opacity: 50%;
+    font-weight: var(--medium);
+}
+.t3 h5, .t5 h5, .t3 h6, .t5 h6{
+    color: var(--very-dark-grayish-blue);
+}
+span{
+    color: var(--light-grayish-blue);
+    font-weight: var(--dark);
+}
+p{
+    color: var(--light-grayish-blue);
+    font-size: 13px;
+    opacity: 70%;
+}
+.t3 span, .t5 span, .t3 p, .t5 p{
+    color: var(--very-dark-blakish-blue);
+}
+
+@media (max-width:988px) {
+    main{
+        display: flex;
+        flex-direction: column;
+        width: 18rem;
+    }
+    .t1{
+        background-position: top right 1rem;
+    }
+}
